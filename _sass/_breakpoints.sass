@@ -1,0 +1,15 @@
+$desktop: 896px
+
+@mixin desktop
+  @media (min-width: #{$desktop})
+    @content
+
+.only-desktop
+  display: none
+  @include desktop
+    display: block
+
+.only-mobile
+  display: block
+  @include desktop
+    display: none

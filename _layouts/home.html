@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="css/home.css">
+<h1>The Practical Developer</h1>
+{% include banner.html %}
+<section class="latest">
+    <h3>Latest</h3>
+    <ul>
+        {% for post in site.posts %}
+        <li>
+            {% include post-item.html post=post %}
+        </li>
+        {% endfor %}
+    </ul>
+</section>

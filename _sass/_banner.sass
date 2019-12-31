@@ -1,0 +1,39 @@
+@import "_colors"
+
+.banner
+  background: $primary-color
+  height: 10px
+  width: 80%
+  position: relative
+  border-radius: 30px
+  margin: 50px auto
+  @include desktop
+    width: 100%
+    margin: 100px auto 150px
+
+  .logo-background
+    width: 70px
+    height: 70px
+    border-radius: 100%
+    border: 3px solid $primary-color
+    background: $background-color
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    @include desktop
+      width: 140px
+      height: 140px
+
+  .logo
+    width: 64px
+    height: 64px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    @include desktop
+      width: 128px
+      height: 128px
+

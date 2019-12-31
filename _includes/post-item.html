@@ -1,0 +1,32 @@
+<a href="{{ include.post.url }}" class="post">
+    <div class="post-content">
+        <h3 class="post-title">{{ include.post.title }}</h3>
+        <div class="post-separator"></div>
+        <div class="post-excerpt">{{ include.post.excerpt }}</div>
+        <section class="post-tags">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <h3>Tags</h3>
+                    </td>
+                    <td>
+                        <div>
+                            {% for tag in include.post.tags %}
+                            <span class="post-tag">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="post-footer">
+            <small class="post-reading">Reading time ~{{ include.post.reading }} minutes</small>
+            <p class="post-author">
+                <small>Author</small>
+                <small class="post-author-name">Juan Francisco Marino</small>
+            </p>
+        </section>
+    </div>
+</a>
