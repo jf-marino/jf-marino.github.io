@@ -1,0 +1,68 @@
+---
+layout: post
+title:  "Introduction to The Practical Developer"
+subtitle: "Some guidelines, opinions and hopes for the future."
+permalink: /welcome
+date: 2020-01-01 13:00:00 -0300
+tags: [Announcement]
+author: Juan Francisco Marino
+reading: 5
+image: /assets/2019-12-30-example/Marketing-and-Advertising-1.jpg
+---
+If you're reading this, then welcome to **The Practical Developer**.
+This is the first post of the entire blog, so your visit means a lot 😄. We're at
+the dawn of a new decade, I hope this new year finds you well, and ends better than
+it starts. I wanted to start the blog by laying out some guidelines as to what you 
+can expect from it in terms of topics, publishing frequency, etc.
+<!--more-->
+ 
+### Topics
+
+First, let's talk about the topics you'll see in this blog, since that's probably
+what you're most interested about. This blog is going to be pretty broad in that sense,
+at least in the beginning. This won't be a Javascript, Java or Golang blog. I don't
+want to box The Practical Developer in a particular technology, framework or platform,
+due mostly to selfish reasons. I started this blog as an outlet to help me think, practice
+and structure my thoughts when I work on side projects. As such, limiting the scope of this
+blog to a particular tech will also limit what I can work on, or I'll have to only write
+about things that are _allowed_, which kind of defeats the purpose, so I'd rather keep 
+the scope loose.
+
+That being said, I don't want this to be a misc blog either. I think it is important to have
+some semblance of a boundary, so that you (the readers) can follow a coherent series
+of content. Also, it allows me to delve deeper into the topics that we do cover, which
+should result in better content all around, and that is my main goal.
+
+So... **what content do we cover?** The main topics for this blog will be 
+**Architecture** and **Software Design**, and the basic premise will be the following:
+
+> Content that gives developers, tech leads and architects practical examples and
+solutions to common development problems in modern tech companies.
+
+However, the posts themselves won't really be
+about discussing architectural patterns, but rather, Architecture will be the overarching
+topic that links different posts together. So, for example, you may see a post series that
+discuss how to implement authentication over and event-driven architecture. The posts 
+themselves will revolve around coding, and perhaps, in some cases, some infrastructure if
+considered relevant to the content.
+
+### Frequency
+
+The other question that I wanted to answer with this initial post is: How often can readers
+expect new content? Well, the truth is, I don't know. Since this is meant to be about side projects
+its very hard to commit to a particular schedule of releases for this. What I can promise is
+this: **Content will be released when its ready and the quality is on par with my expectations**.
+
+On that note, I'll be working on setting up an email list for people to subscribe if you'd like
+to, so you can receive a notification when new content gets uploaded. More on that soon.
+
+### Upcoming content & Closing thoughts
+
+Ok, now that we have the formalities out of the way, stay tuned for some of the early content
+releases coming in the next few days. The first set of articles will be a series on 
+**Building a document processing system** where we'll explore how to set up a REST API to
+handle document uploads and reads using S3 as a storage layer, and later connecting that through
+events to an ML pipeline that will allow us to run models over the documents.
+
+That's it for now! thanks a lot for reading through this opening post and I hope you return
+for more soon.
