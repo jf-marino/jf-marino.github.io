@@ -2,15 +2,18 @@
 @import "_colors"
 @import "_fonts"
 
-*
+h1, h2, h3, h4, h5, h6, p, span, strong, div, em, a
   font-family: $info-font
   font-size: 14px
   letter-spacing: 0
   line-height: normal
   text-align: left
+  @include tablet
+    font-size: 22px
 
 html, body
   background: $background-color
+  margin: auto
 
 h1, h2, h3, h4, h5, h6
   text-align: center
@@ -20,18 +23,18 @@ h1, h2, h3, h4, h5, h6
 
 h1
   font-size: 24px
-  @include desktop
-    font-size: 48px
+  @include tablet
+    font-size: 64px
 
 h2
   font-size: 18px
-  @include desktop
-    font-size: 36px
+  @include tablet
+    font-size: 48px
 
 h3
   font-size: 18px
-  @include desktop
-    font-size: 24px
+  @include tablet
+    font-size: 32px
 
 small
   font-size: 12px
@@ -43,3 +46,18 @@ ul
 p
   margin: 0
   padding: 0
+
+code
+  h1, h2, h3, h4, h5, h6, p, span, strong, div, em, a
+    font-family: inherit
+    font-size: inherit
+    letter-spacing: inherit
+    line-height: inherit
+    text-align: inherit
+
+.highlight
+  background: $code-background
+
+.no-padding-mobile
+  @include mobile
+    padding: 0

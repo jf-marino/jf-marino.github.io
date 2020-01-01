@@ -1,0 +1,75 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="/css/post.css">
+<section class="post">
+    <div class="post-header">
+        <section class="post-header-intro">
+            <img src="{{ page.image }}" alt="{{ page.title }}">
+            <footer class="post-header-shadow"></footer>
+            <h1>{{ page.title }}</h1>
+        </section>
+        <div class="post-header-sigil">
+            {% include sigil.html %}
+        </div>
+    </div>
+    <section class="post-body">
+        <h2 class="post-subtitle">{{ page.subtitle }}</h2>
+        <div class="post-content">
+            {{ page.content }}
+        </div>
+        <section class="post-about-me not-on-desktop">
+            <div class="post-about-me-avatar">
+                <div class="post-about-me-image">
+                    <img src="/assets/avatars/{{ site.data.members[page.author].avatar }}" alt="{{ site.data.members[page.author].name }}">
+                </div>
+                <h4>{{ site.data.members[page.author].name }}</h4>
+                <h5>{{ site.data.members[page.author].title }}</h5>
+            </div>
+            <div class="post-about-me-text">
+                <h3>About Me</h3>
+                {% for paragraph in site.data.members[page.author].about %}
+                <p>{{  paragraph }}</p>
+                {% endfor %}
+            </div>
+        </section>
+        <section class="post-about-me only-desktop">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="post-about-me-avatar">
+                            <div class="post-about-me-image">
+                                <img src="/assets/avatars/{{ site.data.members[page.author].avatar }}" alt="{{ site.data.members[page.author].name }}">
+                            </div>
+                            <h4>{{ site.data.members[page.author].name }}</h4>
+                            <h5>{{ site.data.members[page.author].title }}</h5>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-about-me-text">
+                            <h3>About Me</h3>
+                            {% for paragraph in site.data.members[page.author].about %}
+                            <p>{{  paragraph }}</p>
+                            {% endfor %}
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <footer class="post-footer">
+            <div class="post-footer-tags">
+                Tags
+                {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            <div class="post-footer-separator"></div>
+            <div>
+                <small class="post-footer-reading">Reading time ~{{ page.reading }} minutes</small>
+                <small class="post-footer-published">{{ page.date | date: '%B %d, %Y' }}</small>
+            </div>
+        </footer>
+    </section>
+</section>

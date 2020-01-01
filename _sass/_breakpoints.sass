@@ -1,4 +1,13 @@
-$desktop: 896px
+$tablet: 896px
+$desktop: 1200px
+
+@mixin mobile
+  @media (max-width: #{$tablet})
+    @content
+
+@mixin tablet
+  @media (min-width: #{$tablet})
+    @content
 
 @mixin desktop
   @media (min-width: #{$desktop})
@@ -9,7 +18,15 @@ $desktop: 896px
   @include desktop
     display: block
 
+.not-on-desktop
+  @media (min-width: #{$desktop})
+    display: none
+
 .only-mobile
-  display: block
-  @include desktop
+  display: none
+  @media (max-width: #{$tablet})
+    display: block
+
+.not-on-mobile
+  @media (max-width: #{$tablet})
     display: none

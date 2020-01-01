@@ -1,0 +1,224 @@
+---
+---
+
+@import "_settings"
+@import "_sigil"
+@import "_tag"
+
+$post-margin-tablet: 50px
+$post-margin-desktop: 100px
+
+.post
+  margin: auto
+  @include tablet
+    margin: auto $post-margin-tablet
+  @include desktop
+    margin: auto $post-margin-desktop
+
+.post-header
+  position: relative
+
+.post-header-intro
+  position: relative
+  height: 400px
+  width: 100%
+  overflow: hidden
+  border-bottom-left-radius: 6px
+  border-bottom-right-radius: 6px
+
+  img
+    position: absolute
+    height: 100%
+    left: 50%
+    transform: translateX(-50%)
+    @include desktop
+      height: auto
+      width: 100%
+
+  h1
+    position: absolute
+    bottom: 60px
+    width: 100%
+    color: $light-font-color
+  footer
+    position: absolute
+    width: 100%
+    height: 100%
+    box-shadow: inset 0 -250px 100px -100px #000
+
+.post-header-sigil
+  position: absolute
+  bottom: 0
+  left: 50%
+
+.post-body
+  background: $background-light-color
+  border-top-left-radius: 6px
+  border-top-right-radius: 6px
+  padding: 80px 0 0
+  margin-bottom: 45px
+  @include tablet
+    margin-top: 150px
+
+.post-subtitle
+  font-family: $content-font
+  font-weight: 600
+  margin-bottom: 30px
+  padding: 0 30px
+  text-align: left
+  @include tablet
+    margin-bottom: 80px
+
+.post-content
+  padding: 0 30px
+
+  a, p, strong, em
+    font-family: inherit
+
+  p
+    width: 100%
+    font-family: $content-font
+    font-weight: 300
+    padding: 0 0 20px
+    @include tablet
+      padding: 0 0 40px
+
+  img
+    width: calc(100% + 60px)
+    margin: auto -30px
+    @include tablet
+      width: calc(100% + #{$post-margin-tablet * 2 + 60px})
+      margin: auto -#{$post-margin-tablet + 30px}
+    @include desktop
+      width: calc(100% + #{$post-margin-desktop * 2 + 60px})
+      margin: auto -#{$post-margin-desktop + 30px}
+
+    // @include desktop
+      width: 100vw
+      position: relative
+      left: calc(-50vw + 50%)
+
+  strong
+    color: $secondary-color
+
+  a
+    position: relative
+    font-family: $info-font
+    display: inline-block
+    color: #000
+    text-decoration: none
+    font-weight: bold
+    cursor: pointer
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      bottom: 0
+      width: 100%
+      height: 2px
+      background: $secondary-font-color
+      border-radius: 30px
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      bottom: 0
+      width: 0
+      height: 2px
+      background: $secondary-color
+      border-radius: 30px
+      transition: width 0.2s
+    &:hover::after
+      width: 100%
+
+
+
+.post-about-me
+  width: 90%
+  max-width: 400px
+  margin: 80px auto
+  @include desktop
+    max-width: 700px
+    margin-bottom: 150px
+
+.post-about-me-avatar
+  max-width: 500px
+  padding: 0 40px
+  @include desktop
+    padding: 40px 0
+
+  h4, h5
+    font-family: $content-font
+    font-weight: 300
+  h4
+    margin-top: 10px
+  h5
+    color: $secondary-font-color
+
+.post-about-me-image
+  width: 100px
+  margin: auto
+  border: 2px solid $primary-color
+  border-radius: 50%
+  overflow: hidden
+  img
+    width: 100%
+    transform: scale(1.2)
+
+.post-about-me-text
+  margin: 20px auto 40px
+  max-width: 500px
+  padding: 0 40px
+  font-family: $content-font
+  font-weight: 300
+  @include desktop
+    margin: auto
+    padding: 0 10px
+
+  h3
+    font-family: inherit
+    font-weight: inherit
+    border-bottom: 1px solid $primary-font-color
+    padding: 10px 0
+    margin-bottom: 20px
+  p
+    font-family: inherit
+    font-weight: inherit
+    font-size: 12px
+    margin: 10px auto
+    @include tablet
+      font-size: 14px
+
+.post-footer
+  padding: 0 0 60px
+
+.post-footer-tags
+  padding: 0 20px
+
+.post-footer-separator
+  height: 2px
+  margin: 10px 20px
+  border-radius: 50px
+  background: $primary-color
+
+.post-footer-reading
+  color: $secondary-font-color
+  padding-left: 20px
+  float: left
+
+.post-footer-published
+  color: $secondary-font-color
+  float: right
+  padding-right: 20px
+  text-align: right
+
+.highlight
+  overflow: scroll
+  margin: 10px -30px 20px
+  padding: 25px
+  @include tablet
+    padding: 25px
+    margin: 20px -#{$post-margin-tablet + 30px}
+  @include desktop
+    padding: 45px
+    margin: 40px -#{$post-margin-desktop + 30px}
