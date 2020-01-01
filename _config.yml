@@ -20,10 +20,10 @@
 
 title: The Practical Developer
 email: marinojuanfrancisco@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Practical development content for software developers, architects and leads.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jf-marino.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://jf-marino.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jf-marino
 
 # Build settings
@@ -32,6 +32,7 @@ excerpt_separator: <!--more-->
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 sass:
   sass_dir: _sass
