@@ -19,6 +19,8 @@
   font-weight: 300
   font-size: 24px
   padding: 0 0 10px
+  @include tablet
+    text-align: left
   @include desktop
     text-align: left
 
@@ -33,12 +35,12 @@
   p
     font-family: $content-font
     font-weight: 300
-    color: $secondary-font-color
+    color: $primary-font-color
+    @include tablet
+      font-size: 18px
 
 .post-tags
-  padding: 10px 0
-  @include desktop
-    padding: 10px 0 25px
+  padding: 10px 0 25px
   h3
     font-size: 14px
     font-family: $info-font
